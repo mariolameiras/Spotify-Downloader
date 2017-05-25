@@ -51,7 +51,8 @@ def generateMetaTags(raw_song):
 		return None
 
 def generateSearchURL(song):
-	URL = "https://www.youtube.com/results?sp=EgIQAQ%253D%253D&q=" + song.replace(" ", "%20")
+	URL = "https://www.youtube.com/results?sp=EgIQAQ%253D%253D&q=" + song.replace(" ", "%20") + " -live -mashup -mix -cover"
+	print('youtube search: ' + song.replace(" ", "%20"))
 	return URL
 
 def generateYouTubeURL(raw_song):
@@ -250,7 +251,7 @@ if args.manual:
 print('')
 if args.list:
 	grabList(file='list.txt')
-	exit()	
+	exit()
 
 while True:
 	for temp in os.listdir('Music/'):
