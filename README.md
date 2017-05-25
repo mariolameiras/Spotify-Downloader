@@ -33,6 +33,7 @@ cd
 git clone https://github.com/Ritiek/Spotify-Downloader
 cd Spotify-Downloader
 sudo pip install -U -r requirements.txt
+sudo apt-get install libav-tools
 ```
 You'll also need to install avconv:
 
