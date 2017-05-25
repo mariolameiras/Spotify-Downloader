@@ -38,7 +38,7 @@ def isSpotify(raw_song):
 def generateSongName(raw_song):
 	if isSpotify(raw_song):
 		tags = generateMetaTags(raw_song)
-		raw_song = tags['artists'][0]['name'] + ' - ' + tags['name']
+		raw_song = '"'+tags['artists'][0]['name'] + '"' + ' - ' + '"' + tags['name'] + '"'
 	return raw_song
 
 def generateMetaTags(raw_song):
@@ -51,8 +51,8 @@ def generateMetaTags(raw_song):
 		return None
 
 def generateSearchURL(song):
-	URL = "https://www.youtube.com/results?sp=EgIQAQ%253D%253D&q=" + song.replace(" ", "%20") + " -live -mashup -mix -cover"
-	print('youtube search: ' + song.replace(" ", "%20"))
+	URL = "https://www.youtube.com/results?sp=EgIQAQ%253D%253D&q=" + song.replace(" ", "%20") + "%20-live%20-mashup%20-mix%20-cover%20-remix%20-vivo"
+	print('youtube search: ' + song)
 	return URL
 
 def generateYouTubeURL(raw_song):
